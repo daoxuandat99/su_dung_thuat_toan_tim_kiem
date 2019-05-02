@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //check mail
+    function validateEmail(str) {
+        regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+
+    function checkMail(arr) {
+        arr = ["daoxuandat@gmail.com", "1@gmail", "daoxuandat"];
+        for (let i = 0; i < arr.length; i++) {
+            if (validateEmail(arr[i])) {
+                console.log(arr[i] + " (là email hợp lệ) ");
+            } else {
+                console.log(arr[i] + " (không phải email) ");
+            }
+        }
+    }
+    checkMail();
+</script>
+</body>
+</html>
